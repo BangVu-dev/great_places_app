@@ -1,15 +1,10 @@
-import 'dart:io';
 import 'package:flutter/foundation.dart';
+import '../models/place.dart';
 
-class Place {
-  final String id;
-  final String title;
-  final location;
-  final image;
+class GreatPlaces with ChangeNotifier {
+  final List<Place> _items = [];
 
-  Place(
-      {required this.id,
-      required this.title,
-      required this.location,
-      required this.image});
+  List<Place> get items {
+    return [..._items];
+  }
 }
